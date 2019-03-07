@@ -19,7 +19,7 @@ Stuff; \
 _Pragma("clang diagnostic pop") \
 } while (0)
 
-@interface LQYSessionViewController () <UITableViewDelegate, UITableViewDataSource, LQYInputDelegate, LQYInputActionDelegate>
+@interface LQYSessionViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
 
@@ -36,7 +36,7 @@ _Pragma("clang diagnostic pop") \
     return _dataArr;
 }
 
-- (UITableView *)sessionTableView {
+- (UITableView *)tableView {
     return _tableView;
 }
 

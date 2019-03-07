@@ -25,9 +25,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@interface LQYSessionViewController : UIViewController <LQYMessageCellDelegate>
+@interface LQYSessionViewController : UIViewController <LQYMessageCellDelegate, LQYInputDelegate, LQYInputActionDelegate>
 
-@property (nonatomic, strong, readonly) UITableView *sessionTableView;
+@property (nonatomic, strong, readonly) UITableView *tableView;
 
 @property (nonatomic, strong) NSMutableArray<LQYMessageModel *> *dataArr;
 
