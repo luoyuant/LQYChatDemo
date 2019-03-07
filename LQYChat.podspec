@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-    iOS Chat
+    iOS Chat 聊天会话整合，方便使用。
                    DESC
 
   s.homepage     = "https://github.com/memoriesofsnows/LQYChatDemo.git"
@@ -94,7 +94,7 @@ Pod::Spec.new do |s|
   #-------------------------------1.0.7版本去掉 2018-02-05-----------------------
   # s.source_files  = "MOFSPickerManagerDemo/MOFSPickerManager/**/*.{h,m}", "MOFSPickerManagerDemo/GDataXMLNode/**/*.{h,m}"
   #-----------------------------------------------------------------------------
-  s.source_files  = "LQYChatDemo/LQYChat/*"
+  s.source_files  = "LQYChatDemo/LQYChat/**/*.{h,m}"
   #s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
@@ -163,5 +163,7 @@ Pod::Spec.new do |s|
 
   # s.dependency "GDataXML"
   # "ALLOW_NON-MODULAR_INCLUDES_IN_FRAMEWORK_MODULES" => "YES"
+
+  #pod spec lint LQYChat.podspec --verbose
 
 end
