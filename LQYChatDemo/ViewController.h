@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LQYSessionViewController.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : LQYSessionViewController
 
 
 @end
