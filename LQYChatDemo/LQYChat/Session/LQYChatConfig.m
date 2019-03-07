@@ -10,15 +10,6 @@
 
 @implementation LQYChatConfig
 
-@synthesize imageBundle = _imageBundle;
-
-- (NSBundle *)imageBundle {
-    if (!_imageBundle) {
-        _imageBundle = [NSBundle bundleWithURL:[[NSBundle mainBundle] URLForResource:@"LQYImage" withExtension:@"bundle"]];
-    }
-    return _imageBundle;
-}
-
 + (instancetype)shared {
     static LQYChatConfig *instance = nil;
     static dispatch_once_t onceToken;

@@ -7,7 +7,6 @@
 //
 
 #import "UIImage+LQY.h"
-#import "LQYChatConfig.h"
 #import <objc/runtime.h>
 
 @interface UIImage ()
