@@ -240,6 +240,8 @@
 		BF7AB9892230B61800560D66 /* InputView */ = {
 			isa = PBXGroup;
 			children = (
+				BF7ABAF722311CD300560D66 /* UIImage+LQY.h */,
+				BF7ABAF822311CD300560D66 /* UIImage+LQY.m */,
 				BF7ABA042230B8AF00560D66 /* LQYGrowingTextView.h */,
 				BF7ABA052230B8AF00560D66 /* LQYGrowingTextView.m */,
 				BF7ABA2A2230B96A00560D66 /* LQYInputEmoticonButton.h */,
@@ -294,8 +296,6 @@
 				BF7ABA492230BAFC00560D66 /* LQYSessionTimeCell.m */,
 				BF7ABA4A2230BAFC00560D66 /* LQYSessionViewController.h */,
 				BF7ABA4F2230BAFD00560D66 /* LQYSessionViewController.m */,
-				BF7ABAF722311CD300560D66 /* UIImage+LQY.h */,
-				BF7ABAF822311CD300560D66 /* UIImage+LQY.m */,
 			);
 			path = Session;
 			sourceTree = "<group>";
