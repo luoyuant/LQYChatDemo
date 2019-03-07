@@ -35,10 +35,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, weak) id<LQYSessionCustomStyleDelegate> styleDelegate;
 
-- (void)onSendText:(NSString *)text atUsers:(NSArray *)atUsers;
-
-- (void)onSendImageData:(NSData *)imageData;
-
 - (void)reloadDataWithAnimation:(BOOL)animation;
 
 @end
