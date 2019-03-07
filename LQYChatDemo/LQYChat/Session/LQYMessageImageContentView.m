@@ -50,9 +50,9 @@
                               minSize:(CGSize)imageMinSize
                               maxSize:(CGSize)imageMaxSiz {
     CGSize size;
-    NSInteger imageWidth = originSize.width ,imageHeight = originSize.height;
-    NSInteger imageMinWidth = imageMinSize.width, imageMinHeight = imageMinSize.height;
-    NSInteger imageMaxWidth = imageMaxSiz.width,  imageMaxHeight = imageMaxSiz.height;
+    CGFloat imageWidth = originSize.width ,imageHeight = originSize.height;
+    CGFloat imageMinWidth = imageMinSize.width, imageMinHeight = imageMinSize.height;
+    CGFloat imageMaxWidth = imageMaxSiz.width,  imageMaxHeight = imageMaxSiz.height;
     if (imageWidth > imageHeight) //宽图
     {
         size.height = imageMinHeight;  //高度取最小高度
@@ -65,7 +65,7 @@
     else if(imageWidth < imageHeight)//高图
     {
         size.width = imageMinWidth;
-        size.height = imageHeight *imageMinWidth / imageWidth;
+        size.height = imageHeight * imageMinWidth / imageWidth;
         if (size.height > imageMaxHeight)
         {
             size.height = imageMaxHeight;
