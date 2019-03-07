@@ -1,0 +1,786 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BF7AB9022230B4B400560D66 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7AB9012230B4B400560D66 /* AppDelegate.m */; };
+		BF7AB9052230B4B400560D66 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7AB9042230B4B400560D66 /* ViewController.m */; };
+		BF7AB9082230B4B400560D66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7AB9062230B4B400560D66 /* Main.storyboard */; };
+		BF7AB90A2230B4B500560D66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF7AB9092230B4B500560D66 /* Assets.xcassets */; };
+		BF7AB90D2230B4B500560D66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7AB90B2230B4B500560D66 /* LaunchScreen.storyboard */; };
+		BF7AB9102230B4B500560D66 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7AB90F2230B4B500560D66 /* main.m */; };
+		BF7AB91A2230B4B500560D66 /* LQYChatDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7AB9192230B4B500560D66 /* LQYChatDemoTests.m */; };
+		BF7AB9252230B4B500560D66 /* LQYChatDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7AB9242230B4B500560D66 /* LQYChatDemoUITests.m */; };
+		BF7ABA062230B8AF00560D66 /* LQYGrowingTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7ABA052230B8AF00560D66 /* LQYGrowingTextView.m */; };
+		BF7ABA092230B8DC00560D66 /* LQYTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7ABA082230B8DC00560D66 /* LQYTextView.m */; };
+		BF7ABA2C2230B96B00560D66 /* LQYInputEmoticonButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7ABA282230B96A00560D66 /* LQYInputEmoticonButton.m */; };
+		BF7ABA2D2230B96B00560D66 /* LQYInputEmoticonContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7ABA2B2230B96B00560D66 /* LQYInputEmoticonContainerView.m */; };
+		BF7ABA302230B97D00560D66 /* LQYInputEmoticonManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7ABA2F2230B97D00560D66 /* LQYInputEmoticonManager.m */; };
+		BF7ABA352230B9F100560D66 /* LQYInputEmoticonTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7ABA322230B9F100560D66 /* LQYInputEmoticonTabView.m */; };
+		BF7ABA362230B9F100560D66 /* LQYInputMoreContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7ABA332230B9F100560D66 /* LQYInputMoreContainerView.m */; };
+		BF7ABA412230BA3600560D66 /* LQYInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7ABA392230BA3500560D66 /* LQYInputView.m */; };
+		BF7ABA422230BA3600560D66 /* LQYMoreItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7ABA3A2230BA3600560D66 /* LQYMoreItem.m */; };
+		BF7ABA432230BA3600560D66 /* LQYInputToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7ABA3D2230BA3600560D66 /* LQYInputToolBar.m */; };
+		BF7ABA442230BA3600560D66 /* LQYPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7ABA3E2230BA3600560D66 /* LQYPageView.m */; };
+		BF7ABA452230BA3600560D66 /* LQYKeyboardInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7ABA3F2230BA3600560D66 /* LQYKeyboardInfo.m */; };
+		BF7ABA5D2230BAFE00560D66 /* LQYMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7ABA462230BAFC00560D66 /* LQYMessageModel.m */; };
+		BF7ABA5E2230BAFE00560D66 /* LQYMessageContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7ABA482230BAFC00560D66 /* LQYMessageContentView.m */; };
+		BF7ABA5F2230BAFE00560D66 /* LQYSessionTimeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7ABA492230BAFC00560D66 /* LQYSessionTimeCell.m */; };
+		BF7ABA602230BAFE00560D66 /* LQYSessionCellLayoutConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7ABA4C2230BAFC00560D66 /* LQYSessionCellLayoutConfig.m */; };
+		BF7ABA612230BAFE00560D66 /* LQYSessionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7ABA4F2230BAFD00560D66 /* LQYSessionViewController.m */; };
+		BF7ABA622230BAFE00560D66 /* LQYMessageTextContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7ABA512230BAFD00560D66 /* LQYMessageTextContentView.m */; };
+		BF7ABA632230BAFE00560D66 /* LQYSessionCellSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7ABA532230BAFD00560D66 /* LQYSessionCellSetting.m */; };
+		BF7ABA642230BAFE00560D66 /* LQYChatConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7ABA562230BAFD00560D66 /* LQYChatConfig.m */; };
+		BF7ABA652230BAFE00560D66 /* LQYSessionMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7ABA582230BAFD00560D66 /* LQYSessionMessageCell.m */; };
+		BF7ABA662230BAFE00560D66 /* LQYMessageImageContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7ABA5A2230BAFE00560D66 /* LQYMessageImageContentView.m */; };
+		BF7ABA672230BAFE00560D66 /* LQYMessageNotificationContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7ABA5B2230BAFE00560D66 /* LQYMessageNotificationContentView.m */; };
+		BF7ABA742230BBB300560D66 /* M80AttributedLabelAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7ABA6D2230BBB300560D66 /* M80AttributedLabelAttachment.m */; };
+		BF7ABA752230BBB300560D66 /* M80AttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7ABA6F2230BBB300560D66 /* M80AttributedLabel.m */; };
+		BF7ABA762230BBB300560D66 /* M80AttributedLabelURL.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7ABA702230BBB300560D66 /* M80AttributedLabelURL.m */; };
+		BF7ABA772230BBB300560D66 /* M80AttributedLabelConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7ABA712230BBB300560D66 /* M80AttributedLabelConfig.m */; };
+		BF7ABA782230BBB300560D66 /* NSMutableAttributedString+M80.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7ABA732230BBB300560D66 /* NSMutableAttributedString+M80.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BF7AB9162230B4B500560D66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BF7AB8F52230B4B400560D66 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BF7AB8FC2230B4B400560D66;
+			remoteInfo = LQYChatDemo;
+		};
+		BF7AB9212230B4B500560D66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BF7AB8F52230B4B400560D66 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BF7AB8FC2230B4B400560D66;
+			remoteInfo = LQYChatDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BF7AB8FD2230B4B400560D66 /* LQYChatDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LQYChatDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF7AB9002230B4B400560D66 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BF7AB9012230B4B400560D66 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BF7AB9032230B4B400560D66 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		BF7AB9042230B4B400560D66 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BF7AB9072230B4B400560D66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BF7AB9092230B4B500560D66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BF7AB90C2230B4B500560D66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BF7AB90E2230B4B500560D66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF7AB90F2230B4B500560D66 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BF7AB9152230B4B500560D66 /* LQYChatDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LQYChatDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF7AB9192230B4B500560D66 /* LQYChatDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LQYChatDemoTests.m; sourceTree = "<group>"; };
+		BF7AB91B2230B4B500560D66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF7AB9202230B4B500560D66 /* LQYChatDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LQYChatDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF7AB9242230B4B500560D66 /* LQYChatDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LQYChatDemoUITests.m; sourceTree = "<group>"; };
+		BF7AB9262230B4B500560D66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF7ABA042230B8AF00560D66 /* LQYGrowingTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQYGrowingTextView.h; sourceTree = "<group>"; };
+		BF7ABA052230B8AF00560D66 /* LQYGrowingTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQYGrowingTextView.m; sourceTree = "<group>"; };
+		BF7ABA072230B8DC00560D66 /* LQYTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQYTextView.h; sourceTree = "<group>"; };
+		BF7ABA082230B8DC00560D66 /* LQYTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQYTextView.m; sourceTree = "<group>"; };
+		BF7ABA282230B96A00560D66 /* LQYInputEmoticonButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQYInputEmoticonButton.m; sourceTree = "<group>"; };
+		BF7ABA292230B96A00560D66 /* LQYInputEmoticonContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQYInputEmoticonContainerView.h; sourceTree = "<group>"; };
+		BF7ABA2A2230B96A00560D66 /* LQYInputEmoticonButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQYInputEmoticonButton.h; sourceTree = "<group>"; };
+		BF7ABA2B2230B96B00560D66 /* LQYInputEmoticonContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQYInputEmoticonContainerView.m; sourceTree = "<group>"; };
+		BF7ABA2E2230B97D00560D66 /* LQYInputEmoticonManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQYInputEmoticonManager.h; sourceTree = "<group>"; };
+		BF7ABA2F2230B97D00560D66 /* LQYInputEmoticonManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQYInputEmoticonManager.m; sourceTree = "<group>"; };
+		BF7ABA312230B9F100560D66 /* LQYInputEmoticonTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQYInputEmoticonTabView.h; sourceTree = "<group>"; };
+		BF7ABA322230B9F100560D66 /* LQYInputEmoticonTabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQYInputEmoticonTabView.m; sourceTree = "<group>"; };
+		BF7ABA332230B9F100560D66 /* LQYInputMoreContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQYInputMoreContainerView.m; sourceTree = "<group>"; };
+		BF7ABA342230B9F100560D66 /* LQYInputMoreContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQYInputMoreContainerView.h; sourceTree = "<group>"; };
+		BF7ABA372230BA3500560D66 /* LQYMoreItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQYMoreItem.h; sourceTree = "<group>"; };
+		BF7ABA382230BA3500560D66 /* LQYInputToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQYInputToolBar.h; sourceTree = "<group>"; };
+		BF7ABA392230BA3500560D66 /* LQYInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQYInputView.m; sourceTree = "<group>"; };
+		BF7ABA3A2230BA3600560D66 /* LQYMoreItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQYMoreItem.m; sourceTree = "<group>"; };
+		BF7ABA3B2230BA3600560D66 /* LQYPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQYPageView.h; sourceTree = "<group>"; };
+		BF7ABA3C2230BA3600560D66 /* LQYKeyboardInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQYKeyboardInfo.h; sourceTree = "<group>"; };
+		BF7ABA3D2230BA3600560D66 /* LQYInputToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQYInputToolBar.m; sourceTree = "<group>"; };
+		BF7ABA3E2230BA3600560D66 /* LQYPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQYPageView.m; sourceTree = "<group>"; };
+		BF7ABA3F2230BA3600560D66 /* LQYKeyboardInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQYKeyboardInfo.m; sourceTree = "<group>"; };
+		BF7ABA402230BA3600560D66 /* LQYInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQYInputView.h; sourceTree = "<group>"; };
+		BF7ABA462230BAFC00560D66 /* LQYMessageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQYMessageModel.m; sourceTree = "<group>"; };
+		BF7ABA472230BAFC00560D66 /* LQYSessionCellLayoutConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQYSessionCellLayoutConfig.h; sourceTree = "<group>"; };
+		BF7ABA482230BAFC00560D66 /* LQYMessageContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQYMessageContentView.m; sourceTree = "<group>"; };
+		BF7ABA492230BAFC00560D66 /* LQYSessionTimeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQYSessionTimeCell.m; sourceTree = "<group>"; };
+		BF7ABA4A2230BAFC00560D66 /* LQYSessionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQYSessionViewController.h; sourceTree = "<group>"; };
+		BF7ABA4B2230BAFC00560D66 /* LQYChatConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQYChatConfig.h; sourceTree = "<group>"; };
+		BF7ABA4C2230BAFC00560D66 /* LQYSessionCellLayoutConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQYSessionCellLayoutConfig.m; sourceTree = "<group>"; };
+		BF7ABA4D2230BAFC00560D66 /* LQYSessionCellLayoutProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQYSessionCellLayoutProtocol.h; sourceTree = "<group>"; };
+		BF7ABA4E2230BAFD00560D66 /* LQYMessageImageContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQYMessageImageContentView.h; sourceTree = "<group>"; };
+		BF7ABA4F2230BAFD00560D66 /* LQYSessionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQYSessionViewController.m; sourceTree = "<group>"; };
+		BF7ABA502230BAFD00560D66 /* LQYMessageTextContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQYMessageTextContentView.h; sourceTree = "<group>"; };
+		BF7ABA512230BAFD00560D66 /* LQYMessageTextContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQYMessageTextContentView.m; sourceTree = "<group>"; };
+		BF7ABA522230BAFD00560D66 /* LQYSessionCellSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQYSessionCellSetting.h; sourceTree = "<group>"; };
+		BF7ABA532230BAFD00560D66 /* LQYSessionCellSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQYSessionCellSetting.m; sourceTree = "<group>"; };
+		BF7ABA542230BAFD00560D66 /* LQYMessageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQYMessageModel.h; sourceTree = "<group>"; };
+		BF7ABA552230BAFD00560D66 /* LQYMessageContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQYMessageContentView.h; sourceTree = "<group>"; };
+		BF7ABA562230BAFD00560D66 /* LQYChatConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQYChatConfig.m; sourceTree = "<group>"; };
+		BF7ABA572230BAFD00560D66 /* LQYSessionTimeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQYSessionTimeCell.h; sourceTree = "<group>"; };
+		BF7ABA582230BAFD00560D66 /* LQYSessionMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQYSessionMessageCell.m; sourceTree = "<group>"; };
+		BF7ABA592230BAFD00560D66 /* LQYMessageNotificationContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQYMessageNotificationContentView.h; sourceTree = "<group>"; };
+		BF7ABA5A2230BAFE00560D66 /* LQYMessageImageContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQYMessageImageContentView.m; sourceTree = "<group>"; };
+		BF7ABA5B2230BAFE00560D66 /* LQYMessageNotificationContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQYMessageNotificationContentView.m; sourceTree = "<group>"; };
+		BF7ABA5C2230BAFE00560D66 /* LQYSessionMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQYSessionMessageCell.h; sourceTree = "<group>"; };
+		BF7ABA692230BBB300560D66 /* M80AttributedLabelDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M80AttributedLabelDefines.h; sourceTree = "<group>"; };
+		BF7ABA6A2230BBB300560D66 /* M80AttributedLabelConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M80AttributedLabelConfig.h; sourceTree = "<group>"; };
+		BF7ABA6B2230BBB300560D66 /* M80AttributedLabelURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M80AttributedLabelURL.h; sourceTree = "<group>"; };
+		BF7ABA6C2230BBB300560D66 /* M80AttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M80AttributedLabel.h; sourceTree = "<group>"; };
+		BF7ABA6D2230BBB300560D66 /* M80AttributedLabelAttachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M80AttributedLabelAttachment.m; sourceTree = "<group>"; };
+		BF7ABA6E2230BBB300560D66 /* NSMutableAttributedString+M80.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+M80.h"; sourceTree = "<group>"; };
+		BF7ABA6F2230BBB300560D66 /* M80AttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M80AttributedLabel.m; sourceTree = "<group>"; };
+		BF7ABA702230BBB300560D66 /* M80AttributedLabelURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M80AttributedLabelURL.m; sourceTree = "<group>"; };
+		BF7ABA712230BBB300560D66 /* M80AttributedLabelConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M80AttributedLabelConfig.m; sourceTree = "<group>"; };
+		BF7ABA722230BBB300560D66 /* M80AttributedLabelAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M80AttributedLabelAttachment.h; sourceTree = "<group>"; };
+		BF7ABA732230BBB300560D66 /* NSMutableAttributedString+M80.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+M80.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BF7AB8FA2230B4B400560D66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF7AB9122230B4B500560D66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF7AB91D2230B4B500560D66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BF7AB8F42230B4B400560D66 = {
+			isa = PBXGroup;
+			children = (
+				BF7AB8FF2230B4B400560D66 /* LQYChatDemo */,
+				BF7AB9182230B4B500560D66 /* LQYChatDemoTests */,
+				BF7AB9232230B4B500560D66 /* LQYChatDemoUITests */,
+				BF7AB8FE2230B4B400560D66 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BF7AB8FE2230B4B400560D66 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BF7AB8FD2230B4B400560D66 /* LQYChatDemo.app */,
+				BF7AB9152230B4B500560D66 /* LQYChatDemoTests.xctest */,
+				BF7AB9202230B4B500560D66 /* LQYChatDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BF7AB8FF2230B4B400560D66 /* LQYChatDemo */ = {
+			isa = PBXGroup;
+			children = (
+				BF7AB9882230B61800560D66 /* LQYChat */,
+				BF7AB9002230B4B400560D66 /* AppDelegate.h */,
+				BF7AB9012230B4B400560D66 /* AppDelegate.m */,
+				BF7AB9032230B4B400560D66 /* ViewController.h */,
+				BF7AB9042230B4B400560D66 /* ViewController.m */,
+				BF7AB9062230B4B400560D66 /* Main.storyboard */,
+				BF7AB9092230B4B500560D66 /* Assets.xcassets */,
+				BF7AB90B2230B4B500560D66 /* LaunchScreen.storyboard */,
+				BF7AB90E2230B4B500560D66 /* Info.plist */,
+				BF7AB90F2230B4B500560D66 /* main.m */,
+			);
+			path = LQYChatDemo;
+			sourceTree = "<group>";
+		};
+		BF7AB9182230B4B500560D66 /* LQYChatDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				BF7AB9192230B4B500560D66 /* LQYChatDemoTests.m */,
+				BF7AB91B2230B4B500560D66 /* Info.plist */,
+			);
+			path = LQYChatDemoTests;
+			sourceTree = "<group>";
+		};
+		BF7AB9232230B4B500560D66 /* LQYChatDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BF7AB9242230B4B500560D66 /* LQYChatDemoUITests.m */,
+				BF7AB9262230B4B500560D66 /* Info.plist */,
+			);
+			path = LQYChatDemoUITests;
+			sourceTree = "<group>";
+		};
+		BF7AB9882230B61800560D66 /* LQYChat */ = {
+			isa = PBXGroup;
+			children = (
+				BF7ABA682230BBB300560D66 /* M80AttributedLabel */,
+				BF7AB9892230B61800560D66 /* InputView */,
+				BF7AB9A22230B61800560D66 /* Session */,
+			);
+			path = LQYChat;
+			sourceTree = "<group>";
+		};
+		BF7AB9892230B61800560D66 /* InputView */ = {
+			isa = PBXGroup;
+			children = (
+				BF7ABA312230B9F100560D66 /* LQYInputEmoticonTabView.h */,
+				BF7ABA322230B9F100560D66 /* LQYInputEmoticonTabView.m */,
+				BF7ABA342230B9F100560D66 /* LQYInputMoreContainerView.h */,
+				BF7ABA332230B9F100560D66 /* LQYInputMoreContainerView.m */,
+				BF7ABA2E2230B97D00560D66 /* LQYInputEmoticonManager.h */,
+				BF7ABA2F2230B97D00560D66 /* LQYInputEmoticonManager.m */,
+				BF7ABA2A2230B96A00560D66 /* LQYInputEmoticonButton.h */,
+				BF7ABA282230B96A00560D66 /* LQYInputEmoticonButton.m */,
+				BF7ABA292230B96A00560D66 /* LQYInputEmoticonContainerView.h */,
+				BF7ABA2B2230B96B00560D66 /* LQYInputEmoticonContainerView.m */,
+				BF7ABA072230B8DC00560D66 /* LQYTextView.h */,
+				BF7ABA082230B8DC00560D66 /* LQYTextView.m */,
+				BF7ABA042230B8AF00560D66 /* LQYGrowingTextView.h */,
+				BF7ABA052230B8AF00560D66 /* LQYGrowingTextView.m */,
+				BF7ABA382230BA3500560D66 /* LQYInputToolBar.h */,
+				BF7ABA3D2230BA3600560D66 /* LQYInputToolBar.m */,
+				BF7ABA402230BA3600560D66 /* LQYInputView.h */,
+				BF7ABA392230BA3500560D66 /* LQYInputView.m */,
+				BF7ABA3C2230BA3600560D66 /* LQYKeyboardInfo.h */,
+				BF7ABA3F2230BA3600560D66 /* LQYKeyboardInfo.m */,
+				BF7ABA372230BA3500560D66 /* LQYMoreItem.h */,
+				BF7ABA3A2230BA3600560D66 /* LQYMoreItem.m */,
+				BF7ABA3B2230BA3600560D66 /* LQYPageView.h */,
+				BF7ABA3E2230BA3600560D66 /* LQYPageView.m */,
+			);
+			path = InputView;
+			sourceTree = "<group>";
+		};
+		BF7AB9A22230B61800560D66 /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				BF7ABA4B2230BAFC00560D66 /* LQYChatConfig.h */,
+				BF7ABA562230BAFD00560D66 /* LQYChatConfig.m */,
+				BF7ABA552230BAFD00560D66 /* LQYMessageContentView.h */,
+				BF7ABA482230BAFC00560D66 /* LQYMessageContentView.m */,
+				BF7ABA4E2230BAFD00560D66 /* LQYMessageImageContentView.h */,
+				BF7ABA5A2230BAFE00560D66 /* LQYMessageImageContentView.m */,
+				BF7ABA542230BAFD00560D66 /* LQYMessageModel.h */,
+				BF7ABA462230BAFC00560D66 /* LQYMessageModel.m */,
+				BF7ABA592230BAFD00560D66 /* LQYMessageNotificationContentView.h */,
+				BF7ABA5B2230BAFE00560D66 /* LQYMessageNotificationContentView.m */,
+				BF7ABA502230BAFD00560D66 /* LQYMessageTextContentView.h */,
+				BF7ABA512230BAFD00560D66 /* LQYMessageTextContentView.m */,
+				BF7ABA472230BAFC00560D66 /* LQYSessionCellLayoutConfig.h */,
+				BF7ABA4C2230BAFC00560D66 /* LQYSessionCellLayoutConfig.m */,
+				BF7ABA4D2230BAFC00560D66 /* LQYSessionCellLayoutProtocol.h */,
+				BF7ABA522230BAFD00560D66 /* LQYSessionCellSetting.h */,
+				BF7ABA532230BAFD00560D66 /* LQYSessionCellSetting.m */,
+				BF7ABA5C2230BAFE00560D66 /* LQYSessionMessageCell.h */,
+				BF7ABA582230BAFD00560D66 /* LQYSessionMessageCell.m */,
+				BF7ABA572230BAFD00560D66 /* LQYSessionTimeCell.h */,
+				BF7ABA492230BAFC00560D66 /* LQYSessionTimeCell.m */,
+				BF7ABA4A2230BAFC00560D66 /* LQYSessionViewController.h */,
+				BF7ABA4F2230BAFD00560D66 /* LQYSessionViewController.m */,
+			);
+			path = Session;
+			sourceTree = "<group>";
+		};
+		BF7ABA682230BBB300560D66 /* M80AttributedLabel */ = {
+			isa = PBXGroup;
+			children = (
+				BF7ABA692230BBB300560D66 /* M80AttributedLabelDefines.h */,
+				BF7ABA6A2230BBB300560D66 /* M80AttributedLabelConfig.h */,
+				BF7ABA6B2230BBB300560D66 /* M80AttributedLabelURL.h */,
+				BF7ABA6C2230BBB300560D66 /* M80AttributedLabel.h */,
+				BF7ABA6D2230BBB300560D66 /* M80AttributedLabelAttachment.m */,
+				BF7ABA6E2230BBB300560D66 /* NSMutableAttributedString+M80.h */,
+				BF7ABA6F2230BBB300560D66 /* M80AttributedLabel.m */,
+				BF7ABA702230BBB300560D66 /* M80AttributedLabelURL.m */,
+				BF7ABA712230BBB300560D66 /* M80AttributedLabelConfig.m */,
+				BF7ABA722230BBB300560D66 /* M80AttributedLabelAttachment.h */,
+				BF7ABA732230BBB300560D66 /* NSMutableAttributedString+M80.m */,
+			);
+			path = M80AttributedLabel;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BF7AB8FC2230B4B400560D66 /* LQYChatDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF7AB9292230B4B500560D66 /* Build configuration list for PBXNativeTarget "LQYChatDemo" */;
+			buildPhases = (
+				BF7AB8F92230B4B400560D66 /* Sources */,
+				BF7AB8FA2230B4B400560D66 /* Frameworks */,
+				BF7AB8FB2230B4B400560D66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LQYChatDemo;
+			productName = LQYChatDemo;
+			productReference = BF7AB8FD2230B4B400560D66 /* LQYChatDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BF7AB9142230B4B500560D66 /* LQYChatDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF7AB92C2230B4B500560D66 /* Build configuration list for PBXNativeTarget "LQYChatDemoTests" */;
+			buildPhases = (
+				BF7AB9112230B4B500560D66 /* Sources */,
+				BF7AB9122230B4B500560D66 /* Frameworks */,
+				BF7AB9132230B4B500560D66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BF7AB9172230B4B500560D66 /* PBXTargetDependency */,
+			);
+			name = LQYChatDemoTests;
+			productName = LQYChatDemoTests;
+			productReference = BF7AB9152230B4B500560D66 /* LQYChatDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BF7AB91F2230B4B500560D66 /* LQYChatDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF7AB92F2230B4B500560D66 /* Build configuration list for PBXNativeTarget "LQYChatDemoUITests" */;
+			buildPhases = (
+				BF7AB91C2230B4B500560D66 /* Sources */,
+				BF7AB91D2230B4B500560D66 /* Frameworks */,
+				BF7AB91E2230B4B500560D66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BF7AB9222230B4B500560D66 /* PBXTargetDependency */,
+			);
+			name = LQYChatDemoUITests;
+			productName = LQYChatDemoUITests;
+			productReference = BF7AB9202230B4B500560D66 /* LQYChatDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BF7AB8F52230B4B400560D66 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = luoyuan;
+				TargetAttributes = {
+					BF7AB8FC2230B4B400560D66 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					BF7AB9142230B4B500560D66 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = BF7AB8FC2230B4B400560D66;
+					};
+					BF7AB91F2230B4B500560D66 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = BF7AB8FC2230B4B400560D66;
+					};
+				};
+			};
+			buildConfigurationList = BF7AB8F82230B4B400560D66 /* Build configuration list for PBXProject "LQYChatDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BF7AB8F42230B4B400560D66;
+			productRefGroup = BF7AB8FE2230B4B400560D66 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BF7AB8FC2230B4B400560D66 /* LQYChatDemo */,
+				BF7AB9142230B4B500560D66 /* LQYChatDemoTests */,
+				BF7AB91F2230B4B500560D66 /* LQYChatDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BF7AB8FB2230B4B400560D66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF7AB90D2230B4B500560D66 /* LaunchScreen.storyboard in Resources */,
+				BF7AB90A2230B4B500560D66 /* Assets.xcassets in Resources */,
+				BF7AB9082230B4B400560D66 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF7AB9132230B4B500560D66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF7AB91E2230B4B500560D66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BF7AB8F92230B4B400560D66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF7ABA5E2230BAFE00560D66 /* LQYMessageContentView.m in Sources */,
+				BF7ABA422230BA3600560D66 /* LQYMoreItem.m in Sources */,
+				BF7ABA352230B9F100560D66 /* LQYInputEmoticonTabView.m in Sources */,
+				BF7ABA412230BA3600560D66 /* LQYInputView.m in Sources */,
+				BF7ABA5F2230BAFE00560D66 /* LQYSessionTimeCell.m in Sources */,
+				BF7AB9052230B4B400560D66 /* ViewController.m in Sources */,
+				BF7ABA432230BA3600560D66 /* LQYInputToolBar.m in Sources */,
+				BF7ABA092230B8DC00560D66 /* LQYTextView.m in Sources */,
+				BF7ABA752230BBB300560D66 /* M80AttributedLabel.m in Sources */,
+				BF7ABA672230BAFE00560D66 /* LQYMessageNotificationContentView.m in Sources */,
+				BF7ABA442230BA3600560D66 /* LQYPageView.m in Sources */,
+				BF7ABA652230BAFE00560D66 /* LQYSessionMessageCell.m in Sources */,
+				BF7AB9102230B4B500560D66 /* main.m in Sources */,
+				BF7ABA662230BAFE00560D66 /* LQYMessageImageContentView.m in Sources */,
+				BF7ABA742230BBB300560D66 /* M80AttributedLabelAttachment.m in Sources */,
+				BF7ABA5D2230BAFE00560D66 /* LQYMessageModel.m in Sources */,
+				BF7ABA762230BBB300560D66 /* M80AttributedLabelURL.m in Sources */,
+				BF7ABA302230B97D00560D66 /* LQYInputEmoticonManager.m in Sources */,
+				BF7ABA772230BBB300560D66 /* M80AttributedLabelConfig.m in Sources */,
+				BF7ABA602230BAFE00560D66 /* LQYSessionCellLayoutConfig.m in Sources */,
+				BF7ABA362230B9F100560D66 /* LQYInputMoreContainerView.m in Sources */,
+				BF7ABA612230BAFE00560D66 /* LQYSessionViewController.m in Sources */,
+				BF7ABA2D2230B96B00560D66 /* LQYInputEmoticonContainerView.m in Sources */,
+				BF7ABA2C2230B96B00560D66 /* LQYInputEmoticonButton.m in Sources */,
+				BF7ABA062230B8AF00560D66 /* LQYGrowingTextView.m in Sources */,
+				BF7ABA632230BAFE00560D66 /* LQYSessionCellSetting.m in Sources */,
+				BF7ABA642230BAFE00560D66 /* LQYChatConfig.m in Sources */,
+				BF7ABA452230BA3600560D66 /* LQYKeyboardInfo.m in Sources */,
+				BF7AB9022230B4B400560D66 /* AppDelegate.m in Sources */,
+				BF7ABA782230BBB300560D66 /* NSMutableAttributedString+M80.m in Sources */,
+				BF7ABA622230BAFE00560D66 /* LQYMessageTextContentView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF7AB9112230B4B500560D66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF7AB91A2230B4B500560D66 /* LQYChatDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF7AB91C2230B4B500560D66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF7AB9252230B4B500560D66 /* LQYChatDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BF7AB9172230B4B500560D66 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BF7AB8FC2230B4B400560D66 /* LQYChatDemo */;
+			targetProxy = BF7AB9162230B4B500560D66 /* PBXContainerItemProxy */;
+		};
+		BF7AB9222230B4B500560D66 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BF7AB8FC2230B4B400560D66 /* LQYChatDemo */;
+			targetProxy = BF7AB9212230B4B500560D66 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BF7AB9062230B4B400560D66 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF7AB9072230B4B400560D66 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BF7AB90B2230B4B500560D66 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF7AB90C2230B4B500560D66 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BF7AB9272230B4B500560D66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BF7AB9282230B4B500560D66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BF7AB92A2230B4B500560D66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P266DRY53J;
+				INFOPLIST_FILE = LQYChatDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mofs.com.LQYChatDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BF7AB92B2230B4B500560D66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P266DRY53J;
+				INFOPLIST_FILE = LQYChatDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mofs.com.LQYChatDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BF7AB92D2230B4B500560D66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LQYChatDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mofs.com.LQYChatDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LQYChatDemo.app/LQYChatDemo";
+			};
+			name = Debug;
+		};
+		BF7AB92E2230B4B500560D66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LQYChatDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mofs.com.LQYChatDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LQYChatDemo.app/LQYChatDemo";
+			};
+			name = Release;
+		};
+		BF7AB9302230B4B500560D66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LQYChatDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mofs.com.LQYChatDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LQYChatDemo;
+			};
+			name = Debug;
+		};
+		BF7AB9312230B4B500560D66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LQYChatDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mofs.com.LQYChatDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LQYChatDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BF7AB8F82230B4B400560D66 /* Build configuration list for PBXProject "LQYChatDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF7AB9272230B4B500560D66 /* Debug */,
+				BF7AB9282230B4B500560D66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF7AB9292230B4B500560D66 /* Build configuration list for PBXNativeTarget "LQYChatDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF7AB92A2230B4B500560D66 /* Debug */,
+				BF7AB92B2230B4B500560D66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF7AB92C2230B4B500560D66 /* Build configuration list for PBXNativeTarget "LQYChatDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF7AB92D2230B4B500560D66 /* Debug */,
+				BF7AB92E2230B4B500560D66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF7AB92F2230B4B500560D66 /* Build configuration list for PBXNativeTarget "LQYChatDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF7AB9302230B4B500560D66 /* Debug */,
+				BF7AB9312230B4B500560D66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BF7AB8F52230B4B400560D66 /* Project object */;
+}
