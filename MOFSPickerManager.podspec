@@ -15,9 +15,9 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "MOFSPickerManager"
-  s.version      = "2.1.3"
-  s.summary      = "PickerManager for iOS"
+  s.name         = "LQYChat"
+  s.version      = "1.0.0"
+  s.summary      = "LQYChat for iOS"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,10 +25,10 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-    iOS PickerView整合，一行代码调用（省市区三级联动+日期选择+普通选择）
+    iOS Chat
                    DESC
 
-  s.homepage     = "https://github.com/memoriesofsnows/MOFSPickerManagerDemo.git"
+  s.homepage     = "https://github.com/memoriesofsnows/LQYChatDemo.git"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -53,7 +53,7 @@ Pod::Spec.new do |s|
   #  profile URL.
   #
 
-  s.author             = { "memoriesofsnows" => "luoyuant@163.com" }
+  s.author             = { "LQY" => "luoyuant@163.com" }
   # Or just: s.author    = "memoriesofsnows"
   # s.authors            = { "memoriesofsnows" => "" }
   s.social_media_url   = "http://www.jianshu.com/u/f4284f2cc646"
@@ -65,7 +65,7 @@ Pod::Spec.new do |s|
   #
 
   # s.platform     = :ios
-  s.platform     = :ios, "7.0"
+  s.platform     = :ios, "8.0"
 
   #  When using multiple platforms
   # s.ios.deployment_target = "7.0"
@@ -80,7 +80,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/memoriesofsnows/MOFSPickerManagerDemo.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/memoriesofsnows/LQYChatDemo.git", :tag => "#{s.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -94,8 +94,8 @@ Pod::Spec.new do |s|
   #-------------------------------1.0.7版本去掉 2018-02-05-----------------------
   # s.source_files  = "MOFSPickerManagerDemo/MOFSPickerManager/**/*.{h,m}", "MOFSPickerManagerDemo/GDataXMLNode/**/*.{h,m}"
   #-----------------------------------------------------------------------------
-  s.source_files  = "MOFSPickerManagerDemo/MOFSPickerManager/**/*.{h,m}"
-  s.exclude_files = "Classes/Exclude"
+  s.source_files  = "LQYChatDemo/LQYChat/*"
+  #s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
 
@@ -110,7 +110,7 @@ Pod::Spec.new do |s|
 
   # s.resource  = "icon.png"
   # s.resources = "Resources/*.png"
-  s.resources = "MOFSPickerManagerDemo/MOFSPickerManager/**/*.{xml}"
+  s.resources = "LQYChatDemo/resources/*"
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
