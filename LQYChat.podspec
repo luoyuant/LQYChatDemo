@@ -94,8 +94,34 @@ Pod::Spec.new do |s|
   #-------------------------------1.0.7版本去掉 2018-02-05-----------------------
   # s.source_files  = "MOFSPickerManagerDemo/MOFSPickerManager/**/*.{h,m}", "MOFSPickerManagerDemo/GDataXMLNode/**/*.{h,m}"
   #-----------------------------------------------------------------------------
-  s.source_files  = "LQYChatDemo/LQYChat/**/*.{h,m}"
+  #s.source_files  = "LQYChatDemo/LQYChat/**/*.{h,m}"
   #s.exclude_files = "Classes/Exclude"
+
+  s.subspec 'M80AttributedLabel' do |ss|
+    ss.source_files = 'LQYChatDemo/LQYChat/M80AttributedLabel/*'
+    # ss.public_header_files = 'AFNetworking/AFURL{Request,Response}Serialization.h'
+    # ss.watchos.frameworks = 'MobileCoreServices', 'CoreGraphics'
+    # ss.ios.frameworks = 'MobileCoreServices', 'CoreGraphics'
+    # ss.osx.frameworks = 'CoreServices'
+  end
+
+  s.subspec 'InputView' do |ss|
+    ss.source_files = 'LQYChatDemo/LQYChat/InputView/*'
+    # ss.public_header_files = 'AFNetworking/AFURL{Request,Response}Serialization.h'
+    # ss.watchos.frameworks = 'MobileCoreServices', 'CoreGraphics'
+    # ss.ios.frameworks = 'MobileCoreServices', 'CoreGraphics'
+    # ss.osx.frameworks = 'CoreServices'
+  end
+
+  s.subspec 'Session' do |ss|
+    ss.dependency 'LQYChat/M80AttributedLabel'
+    ss.dependency 'LQYChat/InputView'
+    ss.source_files = 'LQYChatDemo/LQYChat/Session/*'
+    # ss.public_header_files = 'AFNetworking/AFURL{Request,Response}Serialization.h'
+    # ss.watchos.frameworks = 'MobileCoreServices', 'CoreGraphics'
+    # ss.ios.frameworks = 'MobileCoreServices', 'CoreGraphics'
+    # ss.osx.frameworks = 'CoreServices'
+  end
 
   # s.public_header_files = "Classes/**/*.h"
 
@@ -111,6 +137,7 @@ Pod::Spec.new do |s|
   # s.resource  = "icon.png"
   # s.resources = "Resources/*.png"
   s.resources = "LQYChatDemo/resources/*"
+
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
