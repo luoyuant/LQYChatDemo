@@ -68,6 +68,7 @@
         CGFloat w = 200;
         CGFloat h = 20;
         _nameLabel.frame = CGRectMake(x, y, w, h);
+        _nameLabel.textAlignment = self.dataModel.showOnLeft ? NSTextAlignmentLeft : NSTextAlignmentRight;
     }
 }
 
