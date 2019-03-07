@@ -21,8 +21,6 @@ _Pragma("clang diagnostic pop") \
 
 @interface LQYSessionViewController () <UITableViewDelegate, UITableViewDataSource>
 
-@property (nonatomic, strong) UITableView *tableView;
-
 @property (nonatomic, assign) CGFloat inputViewHeight;
 
 @end
