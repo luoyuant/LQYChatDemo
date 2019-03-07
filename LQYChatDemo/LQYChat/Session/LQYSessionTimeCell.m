@@ -33,7 +33,7 @@
         _timeLabel.font = [UIFont boldSystemFontOfSize:10.f];
         _timeLabel.textColor = [UIColor whiteColor];
         [self addSubview:_timeLabel];
-        [_timeBackgroundView setImage:[[UIImage imageNamed:@"icon_session_time_bg"] resizableImageWithCapInsets:UIEdgeInsetsMake(8, 20, 8, 20) resizingMode:UIImageResizingModeStretch]];
+        [_timeBackgroundView setImage:[[UIImage imageLQYNamed:@"icon_session_time_bg"] resizableImageWithCapInsets:UIEdgeInsetsMake(8, 20, 8, 20) resizingMode:UIImageResizingModeStretch]];
         
     }
     return self;

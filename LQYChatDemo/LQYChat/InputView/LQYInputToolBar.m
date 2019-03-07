@@ -8,6 +8,7 @@
 
 #import "LQYInputToolBar.h"
 #import "LQYGrowingTextView.h"
+#import "UIImage+LQY.h"
 
 @interface LQYInputToolBar () <LQYGrowingTextViewDelegate>
 
@@ -29,8 +30,8 @@
         self.backgroundColor = [UIColor whiteColor];
         
         _emoticonBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_emoticonBtn setImage:[UIImage imageNamed:@"input_emotion"] forState:UIControlStateNormal];
-        [_emoticonBtn setImage:[UIImage imageNamed:@"input_emotion"] forState:UIControlStateHighlighted];
+        [_emoticonBtn setImage:[UIImage imageLQYNamed:@"input_emotion"] forState:UIControlStateNormal];
+        [_emoticonBtn setImage:[UIImage imageLQYNamed:@"input_emotion"] forState:UIControlStateHighlighted];
         [_emoticonBtn sizeToFit];
         
         _voiceBtn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -38,17 +39,17 @@
         _voiceBtn.backgroundColor = [UIColor colorWithRed:0.992 green:0.341 blue:0.196 alpha:1.000];
         _voiceBtn.layer.masksToBounds = true;
         _voiceBtn.layer.cornerRadius = _voiceBtn.frame.size.height / 2;
-        [_voiceBtn setImage:[UIImage imageNamed:@"input_voice_white"] forState:UIControlStateNormal];
-        [_voiceBtn setImage:[UIImage imageNamed:@"input_voice_white"] forState:UIControlStateHighlighted];
+        [_voiceBtn setImage:[UIImage imageLQYNamed:@"input_voice_white"] forState:UIControlStateNormal];
+        [_voiceBtn setImage:[UIImage imageLQYNamed:@"input_voice_white"] forState:UIControlStateHighlighted];
         //[_voiceBtn sizeToFit];
         
         _moreBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_moreBtn setImage:[UIImage imageNamed:@"input_more"] forState:UIControlStateNormal];
-        [_moreBtn setImage:[UIImage imageNamed:@"input_more"] forState:UIControlStateHighlighted];
+        [_moreBtn setImage:[UIImage imageLQYNamed:@"input_more"] forState:UIControlStateNormal];
+        [_moreBtn setImage:[UIImage imageLQYNamed:@"input_more"] forState:UIControlStateHighlighted];
         [_moreBtn sizeToFit];
         
         _inputTextBkgImage = [[UIImageView alloc] initWithFrame:CGRectZero];
-        [_inputTextBkgImage setImage:[[UIImage imageNamed:@"icon_input_text_bg"] resizableImageWithCapInsets:UIEdgeInsetsMake(15, 80, 15, 80) resizingMode:UIImageResizingModeStretch]];
+        [_inputTextBkgImage setImage:[[UIImage imageLQYNamed:@"icon_input_text_bg"] resizableImageWithCapInsets:UIEdgeInsetsMake(15, 80, 15, 80) resizingMode:UIImageResizingModeStretch]];
         
         _inputTextView = [[LQYGrowingTextView alloc] initWithFrame:CGRectZero];
         _inputTextView.font = [UIFont systemFontOfSize:14.0f];

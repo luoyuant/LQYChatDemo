@@ -18,6 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)shared;
 
+@property (nonatomic, readonly) NSBundle *imageBundle;
+
 @property (nonatomic, strong) LQYSessionSettings *leftBubbleSettings;
 @property (nonatomic, strong) LQYSessionSettings *rightBubbleSettings;
 

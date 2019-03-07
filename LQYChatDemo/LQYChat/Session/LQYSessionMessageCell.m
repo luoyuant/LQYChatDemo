@@ -137,8 +137,8 @@
 - (void)commonInit {
     _retryButton = [UIButton buttonWithType:UIButtonTypeCustom];
     _retryButton.frame = CGRectMake(0, 0, 20, 20);
-    [_retryButton setImage:[UIImage imageNamed:@"icon_message_cell_error"] forState:UIControlStateNormal];
-    [_retryButton setImage:[UIImage imageNamed:@"icon_message_cell_error"] forState:UIControlStateHighlighted];
+    [_retryButton setImage:[UIImage imageLQYNamed:@"icon_message_cell_error"] forState:UIControlStateNormal];
+    [_retryButton setImage:[UIImage imageLQYNamed:@"icon_message_cell_error"] forState:UIControlStateHighlighted];
     [self.contentView addSubview:_retryButton];
     [_retryButton addTarget:self action:@selector(onRetryMessage:) forControlEvents:UIControlEventTouchUpInside];
     

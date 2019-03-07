@@ -9,6 +9,7 @@
 #import "LQYInputMoreContainerView.h"
 #import "LQYPageView.h"
 #import "LQYMoreItem.h"
+#import "UIImage+LQY.h"
 
 NSInteger LQYMaxItemCountInPage = 8;
 NSInteger LQYButtonItemWidth = 75;
@@ -49,8 +50,8 @@ NSInteger LQYButtonBegintLeftX = 11;
 - (void)setMoreButtons
 {
     NSMutableArray *buttons = [NSMutableArray array];
-    _items = @[[LQYMoreItem item:@"onTapMediaItemPicture:" normalImage:[UIImage imageNamed:@"bk_media_picture_normal"] selectedImage:[UIImage imageNamed:@"bk_media_picture_nomal_pressed"] title:@"相册"],
-                       [LQYMoreItem item:@"onTapMediaItemShoot:" normalImage:[UIImage imageNamed:@"bk_media_shoot_normal"] selectedImage:[UIImage imageNamed:@"bk_media_shoot_pressed"] title:@"拍摄"],
+    _items = @[[LQYMoreItem item:@"onTapMediaItemPicture:" normalImage:[UIImage imageLQYNamed:@"bk_media_picture_normal"] selectedImage:[UIImage imageLQYNamed:@"bk_media_picture_nomal_pressed"] title:@"相册"],
+                       [LQYMoreItem item:@"onTapMediaItemShoot:" normalImage:[UIImage imageLQYNamed:@"bk_media_shoot_normal"] selectedImage:[UIImage imageLQYNamed:@"bk_media_shoot_pressed"] title:@"拍摄"],
                [LQYMoreItem item:@"onNothing:" normalImage:nil selectedImage:nil title:nil],
                [LQYMoreItem item:@"onNothing:" normalImage:nil selectedImage:nil title:nil]];
     

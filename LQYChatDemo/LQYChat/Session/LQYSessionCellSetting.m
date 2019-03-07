@@ -7,6 +7,7 @@
 //
 
 #import "LQYSessionCellSetting.h"
+#import "UIImage+LQY.h"
 
 @implementation LQYSessionCellSetting
 
@@ -14,12 +15,12 @@
     self = [super init];
     if (self) {
         if (onRight) {
-            UIImage *image = [UIImage imageNamed:@"azw.9"];
+            UIImage *image = [UIImage imageLQYNamed:@"azw.9"];
             UIImage *resultImage = [image stretchableImageWithLeftCapWidth:image.size.width * 0.5 topCapHeight:image.size.width * 0.8];
-            _normalBackgroundImage = resultImage;//[[UIImage imageNamed:@"azw.9"] resizableImageWithCapInsets:UIEdgeInsetsMake(18, 25, 17, 25) resizingMode:UIImageResizingModeStretch];
+            _normalBackgroundImage = resultImage;
             _highLightBackgroundImage = resultImage;
         } else {
-            UIImage *image = [UIImage imageNamed:@"azs.9"];
+            UIImage *image = [UIImage imageLQYNamed:@"azs.9"];
             UIImage *resultImage = [image stretchableImageWithLeftCapWidth:image.size.width * 0.5 topCapHeight:image.size.width * 0.8];
             _normalBackgroundImage = resultImage;
             _highLightBackgroundImage = resultImage;
