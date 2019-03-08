@@ -283,9 +283,9 @@
 - (void)onTouchEmoticonBtn:(id)sender
 {
     if (self.inputType != LQYInputTypeEmoticon) {
-//        if ([self.actionDelegate respondsToSelector:@selector(onTapEmoticonBtn:)]) {
-//            [self.actionDelegate onTapEmoticonBtn:sender];
-//        }
+        if ([self.actionDelegate respondsToSelector:@selector(onTapEmoticonBtn:)]) {
+            [self.actionDelegate onTapEmoticonBtn:sender];
+        }
         [self checkEmoticonContainer];
         [self bringSubviewToFront:self.emoticonContainer];
         [self.emoticonContainer setHidden:NO];
@@ -309,9 +309,9 @@
 - (void)onTouchMoreBtn:(id)sender {
     if (self.inputType != LQYInputTypeMore)
     {
-//        if ([self.actionDelegate respondsToSelector:@selector(onTapMoreBtn:)]) {
-//            [self.actionDelegate onTapMoreBtn:sender];
-//        }
+        if ([self.actionDelegate respondsToSelector:@selector(onTapMoreBtn:)]) {
+            [self.actionDelegate onTapMoreBtn:sender];
+        }
         [self checkMoreContainer];
         [self bringSubviewToFront:self.moreContainer];
         [self.moreContainer setHidden:NO];
@@ -350,7 +350,7 @@
 }
 
 
-#pragma mark - NIMInputToolBarDelegate
+#pragma mark - LQYInputToolBarDelegate
 
 - (BOOL)textViewShouldBeginEditing
 {
