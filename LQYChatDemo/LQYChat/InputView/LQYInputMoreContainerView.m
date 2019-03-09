@@ -65,17 +65,18 @@ NSInteger LQYButtonBegintLeftX = 11;
         
         UIButton *btn = [[UIButton alloc] init];
         btn.tag = idx;
-        btn.frame = CGRectMake(0, 0, LQYButtonItemWidth, LQYButtonItemHeight);
+        btn.imageView.contentMode = UIViewContentModeScaleAspectFit;
         [btn setImage:item.normalImage forState:UIControlStateNormal];
         [btn setImage:item.selectedImage forState:UIControlStateHighlighted];
         [btn setTitle:item.title forState:UIControlStateNormal];
+        [btn.titleLabel setFont:[UIFont systemFontOfSize:14.0]];
+        btn.titleLabel.numberOfLines = 2;
+        btn.titleLabel.textAlignment = NSTextAlignmentCenter;
+        btn.contentEdgeInsets = UIEdgeInsetsZero;
+        
         [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         btn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;//使图片和文字水平居中显示
-        [btn setTitleEdgeInsets:UIEdgeInsetsMake(btn.imageView.frame.size.height, - btn.imageView.frame.size.width, 0.0, 0.0)];//文字距离上边框的距离增加imageView的高度，距离左边框减少imageView的宽度，距离下边框和右边框距离不变
-        [btn setImageEdgeInsets:UIEdgeInsetsMake(0.0, 0.0, 0.0, -btn.titleLabel.bounds.size.width)];//图片距离右边框距离减少图片的宽度，其它不边
         
-        [btn.titleLabel setFont:[UIFont systemFontOfSize:14.0]];
-        btn.titleLabel.textAlignment = NSTextAlignmentCenter;
         [buttons addObject:btn];
         
     }];
@@ -113,7 +114,7 @@ NSInteger LQYButtonBegintLeftX = 11;
     return MAX(count, 1);
 }
 
-- (UIView*)mediaPageView:(LQYPageView*)pageView beginItem:(NSInteger)begin endItem:(NSInteger)end
+- (UIView *)mediaPageView:(LQYPageView*)pageView beginItem:(NSInteger)begin endItem:(NSInteger)end
 {
     UIView *subView = [[UIView alloc] init];
     NSInteger span = (self.frame.size.width - LQYPageColumnCount * LQYButtonItemWidth) / (LQYPageColumnCount + 1);
@@ -140,12 +141,33 @@ NSInteger LQYButtonBegintLeftX = 11;
         }
         [button setFrame:CGRectMake(x, y, LQYButtonItemWidth, LQYButtonItemHeight)];
         [subView addSubview:button];
+        
+        {
+            [button.imageView sizeToFit];
+            [button.titleLabel sizeToFit];
+            
+            CGFloat contentHeight = MAX(button.imageView.frame.size.height, button.titleLabel.frame.size.height);
+            
+            CGFloat detalHeight = (button.frame.size.height - contentHeight);
+            CGFloat imageTopOffset = detalHeight > 0 ? detalHeight / 4.5 : 0;
+            
+            CGFloat imageWidth = button.imageView.frame.size.width;
+        
+            CGFloat imageLeftOffset = (button.frame.size.width - imageWidth) / 2;
+            
+            button.titleEdgeInsets = UIEdgeInsetsMake(button.imageView.frame.size.height + imageTopOffset, -button.imageView.frame.size.width, 0, 0);
+            
+            button.imageEdgeInsets = UIEdgeInsetsMake(-imageTopOffset, imageLeftOffset, imageTopOffset, imageLeftOffset);
+            
+        }
+        
+        
         indexInPage ++;
     }
     return subView;
 }
 
-- (UIView*)oneLineMediaInPageView:(LQYPageView *)pageView
+- (UIView *)oneLineMediaInPageView:(LQYPageView *)pageView
                        viewInPage: (NSInteger)index
                             count:(NSInteger)count
 {
