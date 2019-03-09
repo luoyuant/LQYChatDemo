@@ -20,7 +20,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)onSendText:(NSString *)text atUsers:(NSArray *)atUsers;
 
+- (void)onTapEmoticonBtn:(id)sender;
+
 - (void)onTapVoiceBtn:(id)sender;
+
+- (void)onTapMoreBtn:(id)sender;
 
 @end
 
