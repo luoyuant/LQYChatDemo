@@ -225,7 +225,7 @@ NSInteger LQYCustomPageViewHeight    = 159;
 }
 
 
-- (LQYInputEmoticonCatalog*)loadDefaultCatalog
+- (LQYInputEmoticonCatalog *)loadDefaultCatalog
 {
     LQYInputEmoticonCatalog *emoticonCatalog = [[LQYInputEmoticonManager shared] emoticonCatalog:LQY_EmojiCatalog];
     if (emoticonCatalog) {
