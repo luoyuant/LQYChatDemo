@@ -65,11 +65,15 @@ NSInteger LQYButtonBegintLeftX = 11;
         
         UIButton *btn = [[UIButton alloc] init];
         btn.tag = idx;
+        btn.frame = CGRectMake(0, 0, LQYButtonItemWidth, LQYButtonItemHeight);
         [btn setImage:item.normalImage forState:UIControlStateNormal];
         [btn setImage:item.selectedImage forState:UIControlStateHighlighted];
         [btn setTitle:item.title forState:UIControlStateNormal];
         [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [btn setTitleEdgeInsets:UIEdgeInsetsMake(76, -75, 0, 0)];
+        btn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;//使图片和文字水平居中显示
+        [btn setTitleEdgeInsets:UIEdgeInsetsMake(btn.imageView.frame.size.height, - btn.imageView.frame.size.width, 0.0, 0.0)];//文字距离上边框的距离增加imageView的高度，距离左边框减少imageView的宽度，距离下边框和右边框距离不变
+        [btn setImageEdgeInsets:UIEdgeInsetsMake(0.0, 0.0, 0.0, -btn.titleLabel.bounds.size.width)];//图片距离右边框距离减少图片的宽度，其它不边
+        
         [btn.titleLabel setFont:[UIFont systemFontOfSize:14.0]];
         btn.titleLabel.textAlignment = NSTextAlignmentCenter;
         [buttons addObject:btn];
