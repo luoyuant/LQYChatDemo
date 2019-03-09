@@ -82,6 +82,10 @@
     _actionDelegate = actionDelegate;
 }
 
+- (void)setMoreItems:(NSArray<LQYMoreItem *> *)moreItems {
+    _moreItems = moreItems;
+}
+
 - (void)reset
 {
     CGRect frame = self.frame;
@@ -137,7 +141,7 @@
         moreContainer.frame = frame;
         moreContainer.autoresizingMask = UIViewAutoresizingFlexibleWidth;
         moreContainer.hidden   = YES;
-        [moreContainer loadDefaultData];
+        [moreContainer loadItems:_moreItems];
         moreContainer.actionDelegate = self.actionDelegate;
         _moreContainer = moreContainer;
     }

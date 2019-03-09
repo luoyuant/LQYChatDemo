@@ -29,6 +29,16 @@ NSInteger LQYButtonBegintLeftX = 11;
 
 @implementation LQYInputMoreContainerView
 
+- (NSArray<LQYMoreItem *> *)items {
+    if (!_items) {
+        _items = @[[LQYMoreItem item:@"onTapMediaItemPicture:" normalImage:[UIImage imageLQYNamed:@"bk_media_picture_normal"] selectedImage:[UIImage imageLQYNamed:@"bk_media_picture_nomal_pressed"] title:@"相册" tag:1],
+                   [LQYMoreItem item:@"onTapMediaItemShoot:" normalImage:[UIImage imageLQYNamed:@"bk_media_shoot_normal"] selectedImage:[UIImage imageLQYNamed:@"bk_media_shoot_pressed"] title:@"拍摄" tag:2],
+                   [LQYMoreItem item:@"onNothing:" normalImage:nil selectedImage:nil title:nil tag:3],
+                   [LQYMoreItem item:@"onNothing:" normalImage:nil selectedImage:nil title:nil tag:4]];
+    }
+    return _items;
+}
+
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -50,12 +60,8 @@ NSInteger LQYButtonBegintLeftX = 11;
 - (void)setMoreButtons
 {
     NSMutableArray *buttons = [NSMutableArray array];
-    _items = @[[LQYMoreItem item:@"onTapMediaItemPicture:" normalImage:[UIImage imageLQYNamed:@"bk_media_picture_normal"] selectedImage:[UIImage imageLQYNamed:@"bk_media_picture_nomal_pressed"] title:@"相册"],
-                       [LQYMoreItem item:@"onTapMediaItemShoot:" normalImage:[UIImage imageLQYNamed:@"bk_media_shoot_normal"] selectedImage:[UIImage imageLQYNamed:@"bk_media_shoot_pressed"] title:@"拍摄"],
-               [LQYMoreItem item:@"onNothing:" normalImage:nil selectedImage:nil title:nil],
-               [LQYMoreItem item:@"onNothing:" normalImage:nil selectedImage:nil title:nil]];
     
-    [_items enumerateObjectsUsingBlock:^(LQYMoreItem *item, NSUInteger idx, BOOL *stop) {
+    [self.items enumerateObjectsUsingBlock:^(LQYMoreItem *item, NSUInteger idx, BOOL *stop) {
         
         UIButton *btn = [[UIButton alloc] init];
         btn.tag = idx;
@@ -83,7 +89,8 @@ NSInteger LQYButtonBegintLeftX = 11;
     
 }
 
-- (void)loadDefaultData {
+- (void)loadItems:(NSArray<LQYMoreItem *> *)items {
+    _items = items;
     [self setMoreButtons];
     [self.pageView reloadData];
 }

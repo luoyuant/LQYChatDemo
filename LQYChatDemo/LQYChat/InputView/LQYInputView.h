@@ -40,6 +40,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UIView *moreContainer;
 @property (nonatomic, strong) UIView *emoticonContainer;
 
+@property (nonatomic, strong) NSArray<LQYMoreItem *> *moreItems;
+
 @property (nonatomic, assign) LQYInputType inputType;
 
 - (void)reset;

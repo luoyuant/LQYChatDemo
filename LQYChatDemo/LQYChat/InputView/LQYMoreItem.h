@@ -17,11 +17,13 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, nullable) UIImage *normalImage;
 @property (nonatomic, strong, nullable) UIImage *selectedImage;
 @property (nonatomic, copy, nullable) NSString *title;
+@property (nonatomic, assign) NSUInteger tag;
 
 + (instancetype)item:(NSString *)selector
          normalImage:(nullable UIImage  *)normalImage
        selectedImage:(nullable UIImage  *)selectedImage
-               title:(nullable NSString *)title;
+               title:(nullable NSString *)title
+                 tag:(NSUInteger)tag;
 
 @end
 
