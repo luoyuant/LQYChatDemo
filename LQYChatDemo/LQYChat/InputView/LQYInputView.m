@@ -118,7 +118,11 @@
     _toolBar.delegate = self;
     [_toolBar.emoticonBtn addTarget:self action:@selector(onTouchEmoticonBtn:) forControlEvents:UIControlEventTouchUpInside];
     [_toolBar.moreBtn addTarget:self action:@selector(onTouchMoreBtn:) forControlEvents:UIControlEventTouchUpInside];
-    [_toolBar.voiceBtn addTarget:self action:@selector(onTouchVoiceBtn:) forControlEvents:UIControlEventTouchUpInside];
+    [_toolBar.voiceBtn addTarget:self action:@selector(onTouchVoiceBtn) forControlEvents:UIControlEventTouchUpInside];
+    [_toolBar.voiceBtn addTarget:self action:@selector(onTouchVoiceBtnDown) forControlEvents:UIControlEventTouchDown];
+    [_toolBar.voiceBtn addTarget:self action:@selector(onTouchVoiceBtnDragInside) forControlEvents:UIControlEventTouchDragInside];
+    [_toolBar.voiceBtn addTarget:self action:@selector(onTouchVoiceBtnDragOutside) forControlEvents:UIControlEventTouchDragOutside];
+    [_toolBar.voiceBtn addTarget:self action:@selector(onTouchVoiceBtnUpOutside) forControlEvents:UIControlEventTouchUpOutside];
     CGRect frame = _toolBar.frame;
     frame.size = [_toolBar sizeThatFits:CGSizeMake(self.frame.size.width, CGFLOAT_MAX)];
     _toolBar.frame = frame;
@@ -239,7 +243,7 @@
 
 
 #pragma mark - button actions
-- (void)onTouchVoiceBtn:(id)sender {
+- (void)onTouchVoiceBtn {
     // image change
     
     __weak typeof(self) weakSelf = self;
@@ -254,8 +258,8 @@
                     }
                     [self sizeToFit];
                 });
-                if ([self.actionDelegate respondsToSelector:@selector(onTapVoiceBtn:)]) {
-                    [self.actionDelegate onTapVoiceBtn:sender];
+                if ([self.actionDelegate respondsToSelector:@selector(onTapVoiceBtn)]) {
+                    [self.actionDelegate onTapVoiceBtn];
                 }
             }
             else {
@@ -283,12 +287,39 @@
 //    }
 }
 
+- (void)onTouchVoiceBtnDown {
+    //开始
+    if (self.actionDelegate && [self.actionDelegate respondsToSelector:@selector(onTouchVoiceBtnDown)]) {
+        [self.actionDelegate onTouchVoiceBtnDown];
+    }
+}
+
+- (void)onTouchVoiceBtnUpOutside {
+    // cancel Recording
+    if (self.actionDelegate && [self.actionDelegate respondsToSelector:@selector(onTouchVoiceBtnUpOutside)]) {
+        [self.actionDelegate onTouchVoiceBtnUpOutside];
+    }
+}
+
+- (void)onTouchVoiceBtnDragInside {
+    // "手指上滑，取消发送"
+    if (self.actionDelegate && [self.actionDelegate respondsToSelector:@selector(onTouchVoiceBtnDragInside)]) {
+        [self.actionDelegate onTouchVoiceBtnDragInside];
+    }
+}
+
+- (void)onTouchVoiceBtnDragOutside {
+    // "松开手指，取消发送"
+    if (self.actionDelegate && [self.actionDelegate respondsToSelector:@selector(onTouchVoiceBtnDragOutside)]) {
+        [self.actionDelegate onTouchVoiceBtnDragOutside];
+    }
+}
 
 - (void)onTouchEmoticonBtn:(id)sender
 {
     if (self.inputType != LQYInputTypeEmoticon) {
-        if ([self.actionDelegate respondsToSelector:@selector(onTapEmoticonBtn:)]) {
-            [self.actionDelegate onTapEmoticonBtn:sender];
+        if ([self.actionDelegate respondsToSelector:@selector(onTapEmoticonBtn)]) {
+            [self.actionDelegate onTapEmoticonBtn];
         }
         [self checkEmoticonContainer];
         [self bringSubviewToFront:self.emoticonContainer];
@@ -313,8 +344,8 @@
 - (void)onTouchMoreBtn:(id)sender {
     if (self.inputType != LQYInputTypeMore)
     {
-        if ([self.actionDelegate respondsToSelector:@selector(onTapMoreBtn:)]) {
-            [self.actionDelegate onTapMoreBtn:sender];
+        if ([self.actionDelegate respondsToSelector:@selector(onTapMoreBtn)]) {
+            [self.actionDelegate onTapMoreBtn];
         }
         [self checkMoreContainer];
         [self bringSubviewToFront:self.moreContainer];
