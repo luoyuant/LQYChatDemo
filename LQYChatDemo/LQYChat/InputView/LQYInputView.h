@@ -28,6 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)onTouchVoiceBtnUpOutside;
 - (void)onTouchVoiceBtnDragInside;
 - (void)onTouchVoiceBtnDragOutside;
+- (void)onTouchVoiceBtnCancel;
 
 - (void)onTapMoreBtn;
 

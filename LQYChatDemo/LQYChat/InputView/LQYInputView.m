@@ -123,6 +123,8 @@
     [_toolBar.voiceBtn addTarget:self action:@selector(onTouchVoiceBtnDragInside) forControlEvents:UIControlEventTouchDragInside];
     [_toolBar.voiceBtn addTarget:self action:@selector(onTouchVoiceBtnDragOutside) forControlEvents:UIControlEventTouchDragOutside];
     [_toolBar.voiceBtn addTarget:self action:@selector(onTouchVoiceBtnUpOutside) forControlEvents:UIControlEventTouchUpOutside];
+    [_toolBar.voiceBtn addTarget:self action:@selector(onTouchVoiceBtnCancel) forControlEvents:UIControlEventTouchCancel];
+    
     CGRect frame = _toolBar.frame;
     frame.size = [_toolBar sizeThatFits:CGSizeMake(self.frame.size.width, CGFLOAT_MAX)];
     _toolBar.frame = frame;
@@ -287,6 +289,7 @@
 //    }
 }
 
+
 - (void)onTouchVoiceBtnDown {
     //开始
     if (self.actionDelegate && [self.actionDelegate respondsToSelector:@selector(onTouchVoiceBtnDown)]) {
@@ -312,6 +315,12 @@
     // "松开手指，取消发送"
     if (self.actionDelegate && [self.actionDelegate respondsToSelector:@selector(onTouchVoiceBtnDragOutside)]) {
         [self.actionDelegate onTouchVoiceBtnDragOutside];
+    }
+}
+
+- (void)onTouchVoiceBtnCancel {
+    if (self.actionDelegate && [self.actionDelegate respondsToSelector:@selector(onTouchVoiceBtnCancel)]) {
+        [self.actionDelegate onTouchVoiceBtnCancel];
     }
 }
 
