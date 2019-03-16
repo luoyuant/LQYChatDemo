@@ -89,6 +89,9 @@ _Pragma("clang diagnostic pop") \
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.tableView reloadData];
         [self.tableView scrollToBottom:animation];
+        if (self.tableView.contentSize.height <= self.tableView.frame.size.height) {
+            [self adjustTableView];
+        }
     });
 }
 
