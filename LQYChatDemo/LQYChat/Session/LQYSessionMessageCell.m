@@ -147,7 +147,7 @@
     [self.contentView addSubview:_indicatorView];
     
     _avatarImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
-    _avatarImageView.backgroundColor = [UIColor cyanColor];
+    _avatarImageView.backgroundColor = [UIColor grayColor];
     [self.contentView addSubview:_avatarImageView];
     
     _nameLabel = [UILabel new];

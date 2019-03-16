@@ -90,6 +90,7 @@ _Pragma("clang diagnostic pop") \
         [self.tableView reloadData];
         [self.tableView scrollToBottom:animation];
         if (self.tableView.contentSize.height <= self.tableView.frame.size.height) {
+            [self adjustInputView];
             [self adjustTableView];
         }
     });
