@@ -219,7 +219,7 @@
 }
 
 - (void)onRetryMessage:(UIButton *)sender {
-    if (self.delegate && [self.delegate respondsToSelector:@selector(onRetryMessage:)]) {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(onTapRetryMessage:)]) {
         [self.delegate onTapRetryMessage:self.dataModel];
     }
 }
