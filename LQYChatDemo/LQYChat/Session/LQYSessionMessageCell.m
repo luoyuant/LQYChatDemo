@@ -218,8 +218,10 @@
     }
 }
 
-- (void)onRetryMessage:(id)sender {
-    
+- (void)onRetryMessage:(UIButton *)sender {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(onRetryMessage:)]) {
+        [self.delegate onTapRetryMessage:self.dataModel];
+    }
 }
 
 #pragma mark - LQYMessageContentViewDelegate

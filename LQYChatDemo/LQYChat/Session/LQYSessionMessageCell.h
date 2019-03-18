@@ -20,6 +20,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)onTapAudio:(LQYMessageModel *)model;
 
+- (void)onTapRetryMessage:(LQYMessageModel *)model;
+
 - (void)onTapContentView:(LQYMessageModel *)model;
 
 @end
