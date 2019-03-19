@@ -14,7 +14,7 @@
 
 #define LQY_EmojiCatalog @"default"
 
-@interface LQYInputView () <LQYInputToolBarDelegate, LQYInputEmoticonDelegate>
+@interface LQYInputView () <LQYInputToolBarDelegate, LQYInputEmoticonDelegate, UIAlertViewDelegate>
 
 @property (nonatomic, strong) UIView *emoticonView;
 @property (nonatomic, weak) id<LQYInputDelegate> inputDelegate;
@@ -248,32 +248,8 @@
 - (void)onTouchVoiceBtn {
     // image change
     
-    __weak typeof(self) weakSelf = self;
-    if ([[AVAudioSession sharedInstance] respondsToSelector:@selector(requestRecordPermission:)]) {
-        [[AVAudioSession sharedInstance] performSelector:@selector(requestRecordPermission:) withObject:^(BOOL granted) {
-            if (granted) {
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    [weakSelf refreshStatus:LQYInputTypeAudio];
-                    if (weakSelf.toolBar.showKeyboard)
-                    {
-                        weakSelf.toolBar.showKeyboard = NO;
-                    }
-                    [self sizeToFit];
-                });
-                if ([self.actionDelegate respondsToSelector:@selector(onTapVoiceBtn)]) {
-                    [self.actionDelegate onTapVoiceBtn];
-                }
-            }
-            else {
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    [[[UIAlertView alloc] initWithTitle:nil
-                                                message:@"没有麦克风权限"
-                                               delegate:nil
-                                      cancelButtonTitle:@"确定"
-                                      otherButtonTitles:nil] show];
-                });
-            }
-        }];
+    if ([self.actionDelegate respondsToSelector:@selector(onTapVoiceBtn)]) {
+        [self.actionDelegate onTapVoiceBtn];
     }
     
 //    if (self.inputType!= LQYInputTypeAudio) {
@@ -291,10 +267,40 @@
 
 
 - (void)onTouchVoiceBtnDown {
-    //开始
-    if (self.actionDelegate && [self.actionDelegate respondsToSelector:@selector(onTouchVoiceBtnDown)]) {
-        [self.actionDelegate onTouchVoiceBtnDown];
+    __weak typeof(self) weakSelf = self;
+    if ([[AVAudioSession sharedInstance] respondsToSelector:@selector(requestRecordPermission:)]) {
+        [[AVAudioSession sharedInstance] performSelector:@selector(requestRecordPermission:) withObject:^(BOOL granted) {
+            if (granted) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [weakSelf refreshStatus:LQYInputTypeAudio];
+                    if (weakSelf.toolBar.showKeyboard)
+                    {
+                        weakSelf.toolBar.showKeyboard = NO;
+                    }
+                    [self sizeToFit];
+                });
+                //开始
+                if (self.actionDelegate && [self.actionDelegate respondsToSelector:@selector(onTouchVoiceBtnDown)]) {
+                    [self.actionDelegate onTouchVoiceBtnDown];
+                }
+            }
+            else {
+                AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeAudio];
+                if (status != AVAuthorizationStatusNotDetermined) {
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"没有麦克风权限，您可以在“设置”中启用访问"
+                                                                            message:nil
+                                                                           delegate:self
+                                                                  cancelButtonTitle:@"取消"
+                                                                  otherButtonTitles:@"去设置", nil];
+                        alertView.tag = 1024;
+                        [alertView show];
+                    });
+                }
+            }
+        }];
     }
+    
 }
 
 - (void)onTouchVoiceBtnUpOutside {
@@ -393,6 +399,16 @@
     return endEditing;
 }
 
+#pragma mark - UIAlertViewDelegate
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (alertView.tag == 1024) {
+        if (buttonIndex != alertView.cancelButtonIndex) {
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
+        }
+    }
+    
+}
 
 #pragma mark - LQYInputToolBarDelegate
 
