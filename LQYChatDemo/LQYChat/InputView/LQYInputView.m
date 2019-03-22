@@ -277,11 +277,11 @@
                     {
                         weakSelf.toolBar.showKeyboard = NO;
                     }
-                    [self sizeToFit];
+                    [weakSelf sizeToFit];
                 });
                 //开始
-                if (self.actionDelegate && [self.actionDelegate respondsToSelector:@selector(onTouchVoiceBtnDown)]) {
-                    [self.actionDelegate onTouchVoiceBtnDown];
+                if (weakSelf.actionDelegate && [weakSelf.actionDelegate respondsToSelector:@selector(onTouchVoiceBtnDown)]) {
+                    [weakSelf.actionDelegate onTouchVoiceBtnDown];
                 }
             }
             else {

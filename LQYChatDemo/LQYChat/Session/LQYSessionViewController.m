@@ -85,17 +85,6 @@ _Pragma("clang diagnostic pop") \
     [self.view addSubview:_inputView];
 }
 
-- (void)reloadDataWithAnimation:(BOOL)animation {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self.tableView reloadData];
-        [self.tableView scrollToBottom:animation];
-        if (self.tableView.contentSize.height <= self.tableView.frame.size.height) {
-            [self adjustInputView];
-            [self adjustTableView];
-        }
-    });
-}
-
 - (void)resetLayout {
     [self adjustInputView];
     [self adjustTableView];
