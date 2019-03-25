@@ -32,6 +32,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)onTapMoreBtn;
 
+- (void)shouldShowAtSelectViewController;
+
 @end
 
 @protocol LQYInputDelegate <NSObject>
@@ -41,6 +43,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)didChangeInputHeight:(CGFloat)inputHeight;
 
 @end
+
+@class LQYAtUserModel;
 
 @interface LQYInputView : UIView
 
@@ -54,6 +58,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, assign) LQYInputType inputType;
 
+@property (nonatomic, copy) NSString *LQYAtStartString;
+@property (nonatomic, copy) NSString *LQYAtEndString;
+@property (nonatomic, assign) BOOL shouldCheckAt;
+@property (nonatomic, strong) NSMutableArray<LQYAtUserModel *> *atArray;
+
 - (void)reset;
 
 - (void)refreshStatus:(LQYInputType)status;
@@ -65,6 +74,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)setInputTextPlaceHolder:(NSString*)placeHolder;
 
+
+@end
+
+@interface LQYAtUserModel : NSObject
+
+@property (nonatomic, strong) NSString *userName;
+@property (nonatomic, strong) NSString *userId;
 
 @end
 

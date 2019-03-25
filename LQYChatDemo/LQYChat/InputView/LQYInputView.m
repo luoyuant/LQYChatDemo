@@ -26,6 +26,27 @@
 
 @implementation LQYInputView
 
+- (NSMutableArray<LQYAtUserModel *> *)atArray {
+    if (!_atArray) {
+        _atArray = [NSMutableArray array];
+    }
+    return _atArray;
+}
+
+- (NSString *)LQYAtStartString {
+    if (!_LQYAtStartString) {
+        _LQYAtStartString = @"@";
+    }
+    return _LQYAtStartString;
+}
+
+- (NSString *)LQYAtEndString {
+    if (!_LQYAtEndString) {
+        _LQYAtEndString = @"\u2004"; //空格
+    }
+    return _LQYAtEndString;
+}
+
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
@@ -431,11 +452,18 @@
         //非选择删除
         return [self onTextDelete];
     }
-//    if ([self shouldCheckAt])
-//    {
-//        // @ 功能
-//        [self checkAt:text];
-//    }
+    if (self.shouldCheckAt)
+    {
+        // @ 功能
+        if ([text isEqualToString:self.LQYAtStartString]) {
+            if (self.actionDelegate && [self.actionDelegate respondsToSelector:@selector(shouldShowAtSelectViewController)]) {
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.1 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+                    [self.actionDelegate shouldShowAtSelectViewController];
+                });
+            }
+        }
+        
+    }
     NSString *str = [self.toolBar.contentText stringByAppendingString:text];
     if (str.length > self.maxTextLength)
     {
@@ -504,8 +532,8 @@
 - (void)didPressSend:(id)sender {
     if ([self.actionDelegate respondsToSelector:@selector(onSendText:atUsers:)] && [self.toolBar.contentText length] > 0) {
         NSString *sendText = self.toolBar.contentText;
-        [self.actionDelegate onSendText:sendText atUsers:@[]];
-        //[self.atCache clean];
+        [self.actionDelegate onSendText:sendText atUsers:self.atArray];
+        [self.atArray removeAllObjects];
         self.toolBar.contentText = @"";
         [self.toolBar layoutIfNeeded];
     }
@@ -516,14 +544,11 @@
 - (BOOL)onTextDelete
 {
     NSRange range = [self delRangeForEmoticon];
-//    if (range.length == 1)
-//    {
-//        //删的不是表情，可能是@
-//        NIMInputAtItem *item = [self delRangeForAt];
-//        if (item) {
-//            range = item.range;
-//        }
-//    }
+    if (range.length == 1)
+    {
+        //删的不是表情，可能是@
+        range = [self delRangeForAt];
+    }
     if (range.length == 1) {
         //自动删除
         return YES;
@@ -546,25 +571,24 @@
     return range;
 }
 
-
-//- (NIMInputAtItem *)delRangeForAt
-//{
-//    NSString *text = self.toolBar.contentText;
-//    NSRange range = [self rangeForPrefix:NIMInputAtStartChar suffix:NIMInputAtEndChar];
-//    NSRange selectedRange = [self.toolBar selectedRange];
-//    NIMInputAtItem *item = nil;
-//    if (range.length > 1)
-//    {
-//        NSString *name = [text substringWithRange:range];
-//        NSString *set = [NIMInputAtStartChar stringByAppendingString:NIMInputAtEndChar];
-//        name = [name stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:set]];
-//        item = [self.atCache item:name];
-//        range = item? range : NSMakeRange(selectedRange.location - 1, 1);
-//    }
-//    item.range = range;
-//    return item;
-//}
-
+- (NSRange)delRangeForAt
+{
+    NSString *text = self.toolBar.contentText;
+    NSRange range = [self rangeForPrefix:self.LQYAtStartString suffix:self.LQYAtEndString];
+    NSRange selectedRange = [self.toolBar selectedRange];
+    if (range.length > 1)
+    {
+        NSString *name = [text substringWithRange:range];
+        NSString *set = [self.LQYAtStartString stringByAppendingString:self.LQYAtEndString];
+        name = [name stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:set]];
+        LQYAtUserModel *model = [self.atArray filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self.userName == %@", name]].firstObject;
+        range = model ? range : NSMakeRange(selectedRange.location - 1, 1);
+        if (model) {
+            [self.atArray removeObject:model];
+        }
+    }
+    return range;
+}
 
 - (NSRange)rangeForPrefix:(NSString *)prefix suffix:(NSString *)suffix
 {
@@ -593,5 +617,12 @@
     }
     return index == -1 ? NSMakeRange(endLocation - 1, 1) : NSMakeRange(index, endLocation - index);
 }
+
+@end
+
+
+@implementation LQYAtUserModel
+
+
 
 @end

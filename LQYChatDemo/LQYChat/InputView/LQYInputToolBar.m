@@ -86,11 +86,11 @@
 }
 
 - (void)setContentText:(NSString *)contentText {
-    _inputTextView.text = contentText;
+    self.inputTextView.text = contentText;
 }
 
 - (NSString *)contentText {
-    return _inputTextView.text;
+    return self.inputTextView.text;
 }
 
 - (void)setInputBarItemTypes:(NSArray<NSNumber *> *)inputBarItemTypes {

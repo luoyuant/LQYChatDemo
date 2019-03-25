@@ -28,8 +28,9 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        _textView = [[LQYTextView alloc] initWithFrame:self.bounds];
-        _previousFrame = frame;
+        LQYTextView *textView = [[LQYTextView alloc] initWithFrame:self.bounds];
+        self.textView = textView;
+        self.previousFrame = frame;
         [self setup];
     }
     return self;
@@ -38,8 +39,9 @@
 - (instancetype)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        _textView = [[LQYTextView alloc] initWithFrame:CGRectZero];
-        _previousFrame = CGRectZero;
+        LQYTextView *textView = [[LQYTextView alloc] initWithFrame:CGRectZero];
+        self.textView = textView;
+        self.previousFrame = CGRectZero;
         [self setup];
     }
     return self;
