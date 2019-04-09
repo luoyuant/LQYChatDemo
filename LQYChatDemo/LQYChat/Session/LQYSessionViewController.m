@@ -133,7 +133,9 @@ _Pragma("clang diagnostic pop") \
     
     CGFloat containerSafeHeight = self.tableView.superview.frame.size.height - safeAreaInsets.bottom;
     
-    rect.size.height = containerSafeHeight - self.inputView.toolBar.frame.size.height;
+    CGFloat inputHeight = self.inputView.hidden ? 0 : self.inputView.toolBar.frame.size.height;
+    
+    rect.size.height = containerSafeHeight - inputHeight;
     
     
     //tableview 的内容 inset
@@ -152,7 +154,7 @@ _Pragma("clang diagnostic pop") \
     visiableHeight = visiableHeight + self.tableView.contentSize.height + contentInsets.top + contentInsets.bottom;
     visiableHeight = MIN(visiableHeight, rect.size.height);
     
-    rect.origin.y    = containerSafeHeight - visiableHeight - self.inputView.frame.size.height;
+    rect.origin.y    = containerSafeHeight - visiableHeight - inputHeight;
     rect.origin.y    = rect.origin.y > 0 ? 0 : rect.origin.y;
     
     
