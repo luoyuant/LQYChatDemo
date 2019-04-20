@@ -148,6 +148,8 @@
     
     _avatarImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
     _avatarImageView.backgroundColor = [UIColor grayColor];
+    _avatarImageView.userInteractionEnabled = true;
+    [_avatarImageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onTapAvatar)]];
     [self.contentView addSubview:_avatarImageView];
     
     _nameLabel = [UILabel new];
@@ -221,6 +223,12 @@
 - (void)onRetryMessage:(UIButton *)sender {
     if (self.delegate && [self.delegate respondsToSelector:@selector(onTapRetryMessage:)]) {
         [self.delegate onTapRetryMessage:self.dataModel];
+    }
+}
+
+- (void)onTapAvatar {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(onTapAvatar:)]) {
+        [self.delegate onTapAvatar:self.dataModel];
     }
 }
 
